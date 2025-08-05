@@ -101,3 +101,12 @@ img.w190 { max-width: calc(1031.81px * 190 / 190); width: 100%; }
   max-width: 100%;             
   min-width: 10em;            
 } */
+
+.md-tooltip {
+  border-radius: 4px !important; /* match admonition */
+}
+
+/* otherwise it becomes 17.6px some times */
+.md-tooltip__inner {
+  padding: 16px !important;
+}
