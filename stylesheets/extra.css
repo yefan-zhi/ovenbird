@@ -24,22 +24,11 @@ img.w150 { max-width: calc(1031.81px * 150 / 190); width: 100%; }
 img.w160 { max-width: calc(1031.81px * 160 / 190); width: 100%; }
 img.w170 { max-width: calc(1031.81px * 170 / 190); width: 100%; }
 img.w180 { max-width: calc(1031.81px * 180 / 190); width: 100%; }
-
-
-img.small {
-  max-width: 400px; 
-  width: 100%;
-}
-
-
+img.w190 { max-width: calc(1031.81px * 190 / 190); width: 100%; }
 
 .md-content {
   padding-bottom: 100px;
 }
-
-
-
-
 
 :root {
   --primary-r: 239;
@@ -65,10 +54,15 @@ img.small {
           mask-image: var(--md-admonition-icon--ovenbird);
 }
 .md-typeset .admonition.example-inline {
-  margin: -16px;
+  margin-top: -16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: -16px;
+  padding-bottom: 12px;;
 }
-
-
+.md-typeset .admonition.example-inline .admonition-title {
+  margin-bottom: 12px;;
+}
 
 .md-typeset .admonition.example-block,
 .md-typeset details.example-block {
