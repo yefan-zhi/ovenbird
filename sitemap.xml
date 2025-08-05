@@ -2,10 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://yefan-zhi.github.io/ovenbird/index.html</loc>
-         <lastmod>2025-07-30</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
-         <loc>https://yefan-zhi.github.io/ovenbird/about.html</loc>
-         <lastmod>2025-07-30</lastmod>
+         <loc>https://yefan-zhi.github.io/ovenbird/about/about-ovenbird/about-ovenbird.html</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://yefan-zhi.github.io/ovenbird/about/change-log/change-log.html</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://yefan-zhi.github.io/ovenbird/getting-started/first-example/first-example.html</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://yefan-zhi.github.io/ovenbird/getting-started/installation/installation.html</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://yefan-zhi.github.io/ovenbird/getting-started/the-toolpath/the-toolpath.html</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://yefan-zhi.github.io/ovenbird/getting-started/tips/tips.html</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://yefan-zhi.github.io/ovenbird/io/from-to-curves.html</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://yefan-zhi.github.io/ovenbird/slicing/co-slicing/co-slicing.html</loc>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://yefan-zhi.github.io/ovenbird/slicing/orientation-and-slicing/orientation-and-slicing.html</loc>
+         <lastmod>2025-08-05</lastmod>
     </url>
 </urlset>
