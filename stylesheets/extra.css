@@ -110,3 +110,14 @@ img.w190 { max-width: calc(1031.81px * 190 / 190); width: 100%; }
 .md-tooltip__inner {
   padding: 16px !important;
 }
+
+.md-typeset table img {
+  display: inline-block !important;
+}
+
+img.hi{
+  display: block !important;
+  height: 5em !important;
+  padding-left: auto !important;
+  padding-right: auto !important;
+}

@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://yefan-zhi.github.io/ovenbird/io/from-to-curves.html">
+        <link rel="canonical" href="https://yefan-zhi.github.io/ovenbird/slicing/toolpath-operations/toolpath-operations.html">
       
       
-        <link rel="prev" href="../slicing/orientation-and-slicing/orientation-and-slicing.html">
+        <link rel="prev" href="../quick-methods/quick-methods.html">
       
       
-        <link rel="next" href="../about/about-ovenbird/about-ovenbird.html">
+        <link rel="next" href="../continuous-printing/continuous-printing.html">
       
       
-      <link rel="icon" href="../assets/images/ExampleFiles-crop.png">
+      <link rel="icon" href="../../assets/images/ExampleFiles-crop.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>From/to curves - Ovenbird</title>
+        <title>Toolpath operations - Ovenbird</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fromto-curves" class="md-skip">
+        <a href="#toolpath-operations" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Ovenbird" class="md-header__button md-logo" aria-label="Ovenbird" data-md-component="logo">
+    <a href="../../index.html" title="Ovenbird" class="md-header__button md-logo" aria-label="Ovenbird" data-md-component="logo">
       
-  <img src="../assets/images/ExampleFiles.png" alt="logo">
+  <img src="../../assets/images/ExampleFiles.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              From/to curves
+              Toolpath operations
             
           </span>
         </div>
@@ -182,7 +182,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -203,7 +203,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../getting-started/installation/installation.html" class="md-tabs__link">
+        <a href="../../getting-started/installation/installation.html" class="md-tabs__link">
           
   
   
@@ -219,11 +219,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../slicing/orientation-and-slicing/orientation-and-slicing.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../slicing-options/slicing-options.html" class="md-tabs__link">
           
   
   
@@ -243,7 +245,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../data-structures/toolpath.md" class="md-tabs__link">
+        <a href="../../optimizations/layer-level-optimizations/layer-level-optimizations.html" class="md-tabs__link">
           
   
   
@@ -259,13 +261,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="from-to-curves.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../io/from-to-curves/from-to-curves.html" class="md-tabs__link">
           
   
   
@@ -285,7 +285,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../multi-material.md" class="md-tabs__link">
+        <a href="../../multi-material/overview/overview.html" class="md-tabs__link">
           
   
   
@@ -305,7 +305,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../about/about-ovenbird/about-ovenbird.html" class="md-tabs__link">
+        <a href="../../about/about-ovenbird/about-ovenbird.html" class="md-tabs__link">
           
   
   
@@ -341,9 +341,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Ovenbird" class="md-nav__button md-logo" aria-label="Ovenbird" data-md-component="logo">
+    <a href="../../index.html" title="Ovenbird" class="md-nav__button md-logo" aria-label="Ovenbird" data-md-component="logo">
       
-  <img src="../assets/images/ExampleFiles.png" alt="logo">
+  <img src="../../assets/images/ExampleFiles.png" alt="logo">
 
     </a>
     Ovenbird
@@ -358,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/installation/installation.html" class="md-nav__link">
+      <a href="../../getting-started/installation/installation.html" class="md-nav__link">
         
   
   
@@ -444,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/first-example/first-example.html" class="md-nav__link">
+      <a href="../../getting-started/first-example/first-example.html" class="md-nav__link">
         
   
   
@@ -467,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/the-toolpath/the-toolpath.html" class="md-nav__link">
+      <a href="../../getting-started/the-toolpath/the-toolpath.html" class="md-nav__link">
         
   
   
@@ -490,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/tips/tips.html" class="md-nav__link">
+      <a href="../../getting-started/tips/tips.html" class="md-nav__link">
         
   
   
@@ -517,24 +517,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -547,7 +552,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Slicing
@@ -561,12 +566,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../slicing/orientation-and-slicing/orientation-and-slicing.html" class="md-nav__link">
+      <a href="../slicing-options/slicing-options.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Orientation and slicing
+    Slicing options
     
   </span>
   
@@ -584,7 +589,52 @@
   
   
     <li class="md-nav__item">
-      <a href="../continuous-toolpath.md" class="md-nav__link">
+      <a href="../quick-methods/quick-methods.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick methods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Toolpath operations
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="toolpath-operations.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -595,29 +645,71 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Smooth-toolpath.md" class="md-nav__link">
+      
         
-  
-  
-  <span class="md-ellipsis">
-    Surface Quality
-    
-  </span>
-  
 
-      </a>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offsetting-toolpaths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offsetting Toolpaths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolpath-booleans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolpath Booleans
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing layers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-infills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating infills
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -630,35 +722,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../continuous-toolpath.md" class="md-nav__link">
+      <a href="../continuous-printing/continuous-printing.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Continuous printing
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../slicing/surface-toolpath-twins.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Surface-Toolpath Twins
     
   </span>
   
@@ -724,7 +793,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-structures/toolpath.md" class="md-nav__link">
+      <a href="../../optimizations/layer-level-optimizations/layer-level-optimizations.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Layer-level optimizations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimizations/buildability-analysis/buildability-analysis.html" class="md-nav__link">
         
   
   
@@ -747,12 +839,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../continuous-toolpath.md" class="md-nav__link">
+      <a href="../../optimizations/buildability-optimizations/buildability-optimizations.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Buildability optimization
+    Buildability optimizations
     
   </span>
   
@@ -774,29 +866,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -809,7 +896,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             IO
@@ -820,19 +907,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="from-to-curves.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../io/from-to-curves/from-to-curves.html" class="md-nav__link">
         
   
   
@@ -843,7 +921,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -856,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="to-robots.md" class="md-nav__link">
+      <a href="../../io/to-robots/to-robots.html" class="md-nav__link">
         
   
   
@@ -879,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gcodes.md" class="md-nav__link">
+      <a href="../../io/to-g-codes/to-g-codes.html" class="md-nav__link">
         
   
   
@@ -902,12 +979,35 @@
   
   
     <li class="md-nav__item">
-      <a href="gcodes.md" class="md-nav__link">
+      <a href="../../io/visualization/visualization.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Visualization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../io/surface-toolpath-twins/surface-toolpath-twins.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Surface-toolpath twins
     
   </span>
   
@@ -973,12 +1073,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material/overview/overview.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Data structures
+    Overview
     
   </span>
   
@@ -996,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material.md" class="md-nav__link">
         
   
   
@@ -1019,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material.md" class="md-nav__link">
         
   
   
@@ -1042,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material.md" class="md-nav__link">
         
   
   
@@ -1113,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/about-ovenbird/about-ovenbird.html" class="md-nav__link">
+      <a href="../../about/about-ovenbird/about-ovenbird.html" class="md-nav__link">
         
   
   
@@ -1136,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/change-log/change-log.html" class="md-nav__link">
+      <a href="../../about/change-log/change-log.html" class="md-nav__link">
         
   
   
@@ -1175,7 +1275,117 @@
 
 
 
-<h1 id="fromto-curves">From/to curves</h1>
+<h1 id="toolpath-operations">Toolpath operations</h1>
+<h2 id="regions">Regions</h2>
+<p>As we prefer the printing scheme to be as-continuous-as-possible to reduce seam defects, we are particularly intereseted in a Toolpath consisting of <strong>closed curves free of intersections</strong>.</p>
+<p class="annotate">Such a Toolpath would divide a planar space into the interior and the exterior. Each continuous interior part is known as a <strong>region</strong>, enclosed by a closed polygon (the <strong>outer wall</strong>) and potentially some holes inside (the <strong>inner walls</strong>). Regions are automatically solved in Ovenbird when a component needs this information. <img src="../../components/ToolpathRegions.png" class="cin"> <code>Toolpath Regions</code> extracts the regions as trimmed surfaces. (1)</p>
+<ol>
+<li>
+<div class="admonition example-inline">
+<p class="admonition-title">Example File</p>
+<code>7. IO and Visualization → (1) Unwrapping and Wrapping</code></div>
+</li>
+</ol>
+<figure>
+<p><img alt="" class="w170" src="sort_group_web_170.png" /></p>
+<figcaption>
+<p class="annotate">Examples of a region: (a) no holes; (b) one hole; (c) two holes. Local directions of the curve segments are uniform regardless of polylgon topologies (1)</p>
+<ol>
+<li>Image adapted from: Y. Zhi, H. Chai, T. Teng, and M. Akbarzadeh, “<a href="https://www.ingentaconnect.com/contentone/iass/piass/2023/00002023/00000025/art00005">Local optimization of self-supporting shell structures in 3D printing: a skeleton method</a>,” in <em>Proceedings of IASS 2023 symposium Integration of Design and Fabrication</em>, Melbourne, Australia, Jul. 2023.</li>
+</ol>
+</figcaption>
+</figure>
+<p>Ovenbird adopts the convention to orient the curves such that the outer walls are counterclockwise and the inner walls are clockwise. This gives two benefits:</p>
+<ol>
+<li>The left side of the curve is always the interior. This unites a local property with a global property.</li>
+<li>The directions of curves across regions and layers are aligned. This enhances the surface quality of the print.</li>
+</ol>
+<h2 id="offsetting-toolpaths">Offsetting Toolpaths</h2>
+<p>For a Toolpath organized as regions, we can <img src="../../components/OffsetRegion.png" class="cin"> <code>Offset Region</code> with a specific direction. 
+Open Toolpath curves do not support <img src="../../components/OffsetRegion.png" class="cin"> <code>Offset Region</code>. </p>
+<figure>
+<p><img alt="" class="w190" src="offset_01.png" /></p>
+<figcaption>
+<p class="annotate">Offset region:
+(a) Initial layer; (b) inward offsetting; (c) outward offsetting (1)</p>
+<ol>
+<li>Image adapted from: Y. Zhi, H. Chai, T. Teng, and M. Akbarzadeh, “<a href="https://www.sciencedirect.com/science/article/pii/S2214860425000260">Automated toolpath design of 3D concrete printing structural components</a>,” <em>Additive Manufacturing</em>, p. 104662, 2025.</li>
+</ol>
+</figcaption>
+</figure>
+<p class="annotate">Both open and closed Toolpath curves can be offsetted on both sides using <img src="../../components/OffsetToolpath.png" class="cin"> <code>Offset Toolpath</code>. One application is to use the result as a "pseudo-Toolpath" whose region represented the extruded volume. See the following comparison between <img src="../../components/VisualizePrinting.png" class="cin"> <code>Visualize Printing</code> and <img src="../../components/OffsetToolpath.png" class="cin"> <code>Offset Toolpath</code>. (1)</p>
+<ol>
+<li>
+<div class="admonition example-inline">
+<p class="admonition-title">Example File</p>
+<code>3. Toolpath Operations → (2) Offset Toolpath</code></div>
+</li>
+</ol>
+<figure>
+<p><img alt="" class="w190" src="offset-toolpath.png" /></p>
+<figcaption>
+<p>Offset toolpath:
+(a) initial layer; (b) visualization of extrusion; (c) offsetted toolpath</p>
+</figcaption>
+</figure>
+<h2 id="toolpath-booleans">Toolpath Booleans</h2>
+<p>Organizing Toolpath curves as regions also allows layer-level Boolean operations, which can be buggy and time-consuming when performed directly on complex surface objects (meshes, breps, etc).</p>
+<figure>
+<p><img alt="" class="w140" src="toolpath-boolean_01_140.png" /></p>
+<figcaption>
+<p class="annotate">Booleaning two Toolpaths: (a) input; (b) union; (c) difference; and (d) intersection (1)</p>
+<ol>
+<li>Image adapted from: Y. Zhi, H. Chai, T. Teng, and M. Akbarzadeh, “<a href="https://www.sciencedirect.com/science/article/pii/S2214860425000260">Automated toolpath design of 3D concrete printing structural components</a>,” <em>Additive Manufacturing</em>, p. 104662, 2025.</li>
+</ol>
+</figcaption>
+</figure>
+<p class="annotate">Two or multiple geometries (1) can be sliced separately using <img src="../../components/CoSlice.png" class="cin"> <code>Co-Slice</code> (See <a href="../slicing-options/slicing-options.html#co-slicing">co-slicing</a>) and Booleaned using <img src="../../components/ToolpathUnion.png" class="cin"> <code>Toolpath Union</code>, <img src="../../components/ToolpathDifference.png" class="cin"> <code>Toolpath Difference</code>, and <img src="../../components/ToolpathIntersection.png" class="cin"> <code>Toolpath Intersection</code>, thereby enabling the modeling technique of constructive solid geometry. (2) (3)</p>
+<ol>
+<li>By default, <img src="../../components/ToolpathUnion.png" class="cin"> <code>Toolpath Union</code> and <img src="../../components/ToolpathIntersection.png" class="cin"> <code>Toolpath Intersection</code> take <strong>two</strong> Toolpaths. To Boolean a <strong>list</strong> of Toolpaths, check <code>Right Click → Use list</code>.</li>
+<li>
+<div class="admonition example-inline">
+<p class="admonition-title">Example File</p>
+<code>3. Toolpath Operations → (3) Toolpath Booleans</code></div>
+</li>
+<li>There is also a <img src="../../components/JoinToolpaths.png" class="cin"> <code>Join Toolpaths</code> component that simply puts together several Toolpaths. It does not perform Boolean operations. Therefore the result might have intersections.</li>
+</ol>
+<figure>
+<p><img alt="" src="7.%20Toolpath%20Boolean.gif" /></p>
+<figcaption>
+<p>Toolpath Boolean operations, showing the regions</p>
+</figcaption>
+</figure>
+<figure>
+<p><img alt="" class="w190" src="boolean-example_01.png" /></p>
+<figcaption>
+<p class="annotate">Example of unioning two Toolpaths to optimize the buildability and strength of a TPMS-inspired print (1)</p>
+<ol>
+<li>Image adapted from: Y. Zhi, H. Chai, T. Teng, and M. Akbarzadeh, “<a href="https://www.sciencedirect.com/science/article/pii/S2214860425000260">Automated toolpath design of 3D concrete printing structural components</a>,” <em>Additive Manufacturing</em>, p. 104662, 2025.</li>
+</ol>
+</figcaption>
+</figure>
+<p class="annotate">An important application of Booleaning is to change the number of curves per layer (usually decreasing it) at uniform locations. Ovenbird features a filter that decides <strong>per layer</strong> to accept or reject the result of Booleaning according to the number of curves before and after. (1)</p>
+<ol>
+<li>
+<div class="admonition example-inline">
+<p class="admonition-title">Example File</p>
+<code>3. Toolpath Operations → (4) Toolpath Booleans with Filters</code></div>
+</li>
+</ol>
+<h2 id="managing-layers">Managing layers</h2>
+<p>With <img src="../../components/SplitLayers.png" class="cin"> <code>Split Layers</code> and <img src="../../components/JoinLayers.png" class="cin"> <code>Join Layers</code>, a Toolpath can be divided vertically into parts that are processed separated and joined after.</p>
+<h2 id="generating-infills">Generating infills</h2>
+<p>Although the primary focus of Ovenbird is not to create toolpaths with infills, <img src="../../components/Infill.png" class="cin"> <code>Infill</code> offers a simple method that iteratively offsets the boundaries of a region and then connect them to form a solid infill.</p>
+<figure>
+<p><img alt="" class="w70" src="heart_animation.gif" /></p>
+<figcaption>
+<p>Example of generating infills at bottom layers to form a box</p>
+</figcaption>
+</figure>
+<div class="admonition example-block">
+<p class="admonition-title">Example File</p>
+<p><code>3. Toolpath Operations → (5) Infill and Split Layers</code></p>
+</div>
 
 
 
@@ -1193,6 +1403,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1211,7 +1423,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../slicing/orientation-and-slicing/orientation-and-slicing.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Orientation and slicing">
+          <a href="../quick-methods/quick-methods.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quick methods">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1221,20 +1433,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Orientation and slicing
+                Quick methods
               </div>
             </div>
           </a>
         
         
           
-          <a href="../about/about-ovenbird/about-ovenbird.html" class="md-footer__link md-footer__link--next" aria-label="Next: About Ovenbird">
+          <a href="../continuous-printing/continuous-printing.html" class="md-footer__link md-footer__link--next" aria-label="Next: Continuous printing">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                About Ovenbird
+                Continuous printing
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1270,12 +1482,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "toc.follow", "toc.integrate", "content.code.copy", "navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "toc.follow", "toc.integrate", "content.code.copy", "navigation.footer", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
-        <script src="../javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
