@@ -14,7 +14,7 @@
         <link rel="prev" href="../../io/surface-toolpath-twins/surface-toolpath-twins.html">
       
       
-        <link rel="next" href="../../about/about-ovenbird/about-ovenbird.html">
+        <link rel="next" href="../mixing-materials/mixing-materials.html">
       
       
       <link rel="icon" href="../../assets/images/ExampleFiles-crop.png">
@@ -1036,9 +1036,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#gradient-multi-material-extrusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient multi-material extrusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#printing-system" class="md-nav__link">
     <span class="md-ellipsis">
       Printing system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-material-toolpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-material toolpath
     </span>
   </a>
   
@@ -1054,9 +1072,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-material-printing" class="md-nav__link">
+  <a href="#multi-material-g-codes" class="md-nav__link">
     <span class="md-ellipsis">
-      Multi-material printing
+      Multi-material G-Codes
     </span>
   </a>
   
@@ -1078,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
+      <a href="../mixing-materials/mixing-materials.html" class="md-nav__link">
         
   
   
@@ -1101,30 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Transitional behavior
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
+      <a href="../gradient-printing/gradient-printing.html" class="md-nav__link">
         
   
   
@@ -1258,16 +1253,91 @@
 
 
 <h1 id="overview">Overview</h1>
-<p>Ovenbird proposes a system of <strong>as-continuous-as-possible multi-material extrusion with gradient composition and transition</strong>.</p>
+<figure>
+<p><img alt="" class="w90" src="materials-design-2.jpg" /></p>
+<figcaption>
+<p class="annotate">A TPMS geometry printed with PLA filament of three colors based on the FEA result of two-point loading (1)</p>
+<ol>
+<li>Image adapted from: T. Teng, Y. Zhi, and M. Akbarzadeh, “<a href="https://www.sciencedirect.com/science/article/pii/S0264127524008542">Prototyping high-fidelity multifunctional objects using single-nozzle multi-filament additive manufacturing system with active mixing</a>,” Materials &amp; Design, vol. 249, 2025.</li>
+</ol>
+</figcaption>
+</figure>
+<p>Ovenbird proposes a system of <strong>as-continuous-as-possible multi-material extrusion with gradient composition and transition</strong>.
+This page introduces the elements that form this system and the first steps to get a <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code>.</p>
+<h2 id="gradient-multi-material-extrusion">Gradient multi-material extrusion</h2>
+<p>The multi-material extrusion system is gradient in two senses. </p>
+<ul>
+<li>
+<p class="annotate">The system produces <strong>gradient compositions</strong> of the input materials. The extrudate is a <strong>gradient mixture</strong> of multiple <strong>filaments</strong> (1). With a limited number of distinct filaments, the system produces a spectrum of mixtures through <strong>active mixing</strong>.</p>
+<ol>
+<li>We adhere to the terminology that a <strong>filament</strong> is a pre-prepared input material and a <strong>mixture</strong> is a result of mixing that usually contains more than one filament. Unless otherwise noted, a <strong>material</strong> is a <strong>mixture</strong>.</li>
+</ol>
+</li>
+<li>
+<p>The extruded mixture is changed on the fly with <strong>gradient transitions</strong>.</p>
+</li>
+</ul>
 <h2 id="printing-system">Printing system</h2>
+<p>Ovenbird's gradient multi-material extrusion relies on a single-nozzle multi-filament (SNMF) system where a palette of input filaments or pastes are fed and mixed to form the extrudate with tailored local material composition. The core of the SNMF system is a multi-inlet nozzle where filaments/pastes are fed through separate channels and converged at the mixing chamber equipped with a blending auger.</p>
 <figure>
 <p><img alt="" class="w90" src="mm-machine.png" /></p>
-<figcaption></figcaption>
+<figcaption>
+<p>Multi-inlet nozzle for SNMF extrusion</p>
+</figcaption>
 </figure>
+<h2 id="multi-material-toolpath">Multi-material toolpath</h2>
+<p>The most convenient way to create a <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code> in Ovenbird is through <img src="../../components/MultiMaterialPrinting.png" class="cin"> <code>Multi-Material Printing</code>. It assigns materials to a <img src="../../components/Toolpath.png" class="cin"> <code>Toolpath</code> using <strong>intersectors</strong>. To code a <img src="../../components/Toolpath.png" class="cin"> <code>Toolpath</code> using <span class="arithmatex">\(n\)</span> materials (mixtures), create a DataTree of closed intersector Breps and/or Meshes with <span class="arithmatex">\(n\)</span> branches. Parts of the <img src="../../components/Toolpath.png" class="cin"> <code>Toolpath</code> that are enclosed in the <span class="arithmatex">\(i\)</span>th branch will be assigned the <span class="arithmatex">\(i\)</span>th material. One of the <span class="arithmatex">\(n\)</span> branches can be left empty to note the default material. </p>
+<figure>
+<p><img alt="" src="workflow-diagram-mm.png" /></p>
+<figcaption>
+<p>The Ovenbird framework highlight multi-material printing</p>
+</figcaption>
+</figure>
+<div class="admonition example-block">
+<p class="admonition-title">Example File</p>
+<p><code>9. Multi-Material Printing → (1) Minimal Working Example</code></p>
+</div>
 <h2 id="data-structure">Data structure</h2>
-<p>A <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code> is a printing scheme of toolpath curves coded with material information. Each toolpath curve might consist of several <strong>segments</strong>, where each segment is assigned a specific <strong>material</strong>.</p>
-<h2 id="multi-material-printing">Multi-material printing</h2>
-<!-- ##  -->
+<p>A <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code> is a printing scheme of toolpath curves coded with material information. It is organized in <strong>layers</strong>, similar to the Toolpath data structure. Each multi-material toolpath curve consists of several <strong>segments</strong>, where each segment is assigned a specific <strong>material</strong>. Each material is given a <strong>color</strong> for visualization.</p>
+<div class="language-text highlight"><pre><span></span><code>{0} Multi-Material Toolpath
+├─ {0;0} Multi-Material Layer
+│  ├─ {0;0;0} Multi-Material Curve
+│  │  ├─ {0;0;0;0} Multi-Material Segment
+│  │  │  ├── Curve/Polyline
+│  │  │  ├── Material Index
+│  │  │  ├── {0;0;0;0}[0] Point/Height/Tangent
+│  │  │  ├── {0;0;0;0}[1] Point/Height/Tangent
+│  │  │  └── ...
+│  │  ├─ {0;0;0;1} Multi-Material Segment
+│  │  └─ ...
+│  ├─ {0;0;1} Multi-Material Curve
+│  └─ ...
+├─ {0;1} Multi-Material Layer
+├─ ...
+└─ Material Colors 
+   ├─ Material Colors[0]
+   ├─ Material Colors[1]
+   └─ ...
+</code></pre></div>
+<p class="annotate">The <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code> can be wrapped and unwrapped. Utilizing <img src="../../components/WrapMultiMaterialToolpath.png" class="cin"> <code>Wrap Multi-Material Toolpath</code>, we can create alternative methods of generating a <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code> other than <img src="../../components/MultiMaterialPrinting.png" class="cin"> <code>Multi-Material Printing</code>. (<img src="../../components/SimplifyMultiMaterialToolpath.png" class="cin"> <code>Simplify Multi-Material Toolpath</code> comes handy here.) A comprehensive discussion can be found in our paper <em>Prototyping high-fidelity multifunctional objects using single-nozzle multi-filament additive manufacturing system with active mixing</em>. (1)</p>
+<ol>
+<li>T. Teng, Y. Zhi, and M. Akbarzadeh, “<a href="https://www.sciencedirect.com/science/article/pii/S0264127524008542">Prototyping high-fidelity multifunctional objects using single-nozzle multi-filament additive manufacturing system with active mixing</a>,” Materials &amp; Design, vol. 249, 2025.</li>
+</ol>
+<div class="admonition example-block">
+<p class="admonition-title">Example File</p>
+<p><code>9. Multi-Material Printing → (2) Unwrapping and Wrapping</code></p>
+</div>
+<h2 id="multi-material-g-codes">Multi-material G-Codes</h2>
+<p><img src="../../components/GCodeMultiMaterial.png" class="cin"> <code>GCode Multi-Material</code> makes minimal changes to a conventional G-Code to print gradient multi-material mixtures. Each mixture is set up as a "tool" with a unique index number. When printing, the <span class="arithmatex">\(i\)</span>th mixture is called by the command <code>Ti</code>.</p>
+<figure>
+<p><img alt="" class="w90" src="GCode.png" /></p>
+<figcaption>
+<p class="annotate">Ovenbird's multi-material G-Codes (1)</p>
+<ol>
+<li>Image adapted from: T. Teng, Y. Zhi, and M. Akbarzadeh, “<a href="https://www.sciencedirect.com/science/article/pii/S0264127524008542">Prototyping high-fidelity multifunctional objects using single-nozzle multi-filament additive manufacturing system with active mixing</a>,” Materials &amp; Design, vol. 249, 2025.</li>
+</ol>
+</figcaption>
+</figure>
 
 
 
@@ -1322,13 +1392,13 @@
         
         
           
-          <a href="../../about/about-ovenbird/about-ovenbird.html" class="md-footer__link md-footer__link--next" aria-label="Next: About Ovenbird">
+          <a href="../mixing-materials/mixing-materials.html" class="md-footer__link md-footer__link--next" aria-label="Next: Mixing materials">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                About Ovenbird
+                Mixing materials
               </div>
             </div>
             <div class="md-footer__button md-icon">

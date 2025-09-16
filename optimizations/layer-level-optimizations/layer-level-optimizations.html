@@ -1087,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material/mixing-materials/mixing-materials.html" class="md-nav__link">
         
   
   
@@ -1110,30 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Transitional behavior
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material/gradient-printing/gradient-printing.html" class="md-nav__link">
         
   
   
@@ -1268,7 +1245,7 @@
 
 <h1 id="layer-level-optimizations">Layer-level optimizations</h1>
 <h2 id="smoothing">Smoothing</h2>
-<p>To have clean surfaces we would like to avoid sharp turns in the Toolpath. <img src="../../components/SmoothToolpath.png" class="cin"> <code>Smooth Toolpath</code> smoothes a <strong>polyline</strong> Toolpath through Laplacian smoothing iterations.</p>
+<p>To have clean surfaces we would like to avoid sharp turns in the Toolpath. <img src="../../components/SmoothToolpath.png" class="cin"> <code>Smooth Toolpath</code> smoothes a <strong>polyline</strong> Toolpath (see <a href="../../slicing/quick-methods/quick-methods.html#polyline-toolpath">Polyline Toolpath</a>) through Laplacian smoothing iterations.</p>
 <figure>
 <p><img alt="" class="w90" src="local-optimization-definition-column.png" /></p>
 <figcaption>
@@ -1289,7 +1266,7 @@
 <p><code>5. Layer-Level Optimizations → (1) Smooth Toolpath</code></p>
 </div>
 <h2 id="overfill-optimization">Overfill optimization</h2>
-<p><img src="../../components/OverfillOptimization.png" class="cin"> <code>Overfill Optimization</code> deals with another type of overfill. When two parts of the Toolpaths are too close to each other, <img src="../../components/OverfillOptimization.png" class="cin"> <code>Overfill Optimization</code> <strong>pulls</strong> them apart using an iterative algorithm. Parts of the Toolpath can be <strong>locked</strong> in this process if needed.</p>
+<p><img src="../../components/OverfillOptimization.png" class="cin"> <code>Overfill Optimization</code> deals with another type of overfill. When two parts of a <strong>polyline</strong> Toolpath (see <a href="../../slicing/quick-methods/quick-methods.html#polyline-toolpath">Polyline Toolpath</a>) are too close to each other, <img src="../../components/OverfillOptimization.png" class="cin"> <code>Overfill Optimization</code> <strong>pulls</strong> them apart using an iterative algorithm. Parts of the Toolpath can be <strong>locked</strong> in this process if needed.</p>
 <figure>
 <p><img alt="" src="6.%20Overfill%20Optimization.gif" /></p>
 <figcaption>

@@ -665,6 +665,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bed-adhesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bed Adhesion
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1078,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material/mixing-materials/mixing-materials.html" class="md-nav__link">
         
   
   
@@ -1101,30 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Transitional behavior
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material/gradient-printing/gradient-printing.html" class="md-nav__link">
         
   
   
@@ -1262,6 +1248,12 @@
 <p><img src="../../components/CleanToolpath.png" class="cin"> <code>Clean Toolpath</code> culls the short curves from the Toolpath and make open curves closed if necessary. It is a handy first step after <img src="../../components/Slice.png" class="cin"> <code>Slice</code>.</p>
 <h2 id="polyline-toolpath">Polyline Toolpath</h2>
 <p><img src="../../components/PolylineToolpath.png" class="cin"> <code>Polyline Toolpath</code> converts a Toolpath that might contain NURBS curves to a Toolpath of pure polylines. This is a necessary step if certain operations such as <img src="../../components/SmoothToolpath.png" class="cin"> <code>Smooth Toolpath</code> and <img src="../../components/OverfillOptimization.png" class="cin"> <code>Overfill Optimization</code> are to be performed. The resolution of the polyline Toolpath will also affect the results of these polyline-based operations.</p>
+<figure>
+<p><img alt="" class="w140" src="polyline.png" /></p>
+<figcaption>
+<p>Methods of generating a polyline Toolpath. Right-click the component to configure</p>
+</figcaption>
+</figure>
 <h2 id="transformations">Transformations</h2>
 <p><img src="../../components/Toolpath.png" class="cin"> <code>Toolpath</code>, <img src="../../components/ContinuousToolpath.png" class="cin"> <code>Continuous Toolpath</code>, and <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code> objects can be transformed using native Grasshopper methods so long as the transformation is Euclidean (can be a combination of translation, rotation, and mirroring, with a determinant of <span class="arithmatex">\(\pm 1\)</span>).</p>
 <p class="annotate">We also provide specific components for transformation such as <img src="../../components/MoveToolpath.png" class="cin"> <code>Move Toolpath</code>, <img src="../../components/RotateToolpath.png" class="cin"> <code>Rotate Toolpath</code>, <img src="../../components/MirrorToolpath.png" class="cin"> <code>Mirror Toolpath</code>, <img src="../../components/OrientToolpath.png" class="cin"> <code>Orient Toolpath</code>, and <img src="../../components/ScaleToolpath.png" class="cin"> <code>Scale Toolpath</code>. Note that the <strong>base plane</strong> of the Toolpath is used as a system of reference. (1) </p>
@@ -1272,6 +1264,8 @@
 <code>3. Toolpath Operations → Transform Toolpath</code></div>
 </li>
 </ol>
+<h2 id="bed-adhesion">Bed Adhesion</h2>
+<p>We can add <img src="../../components/BedAdhesion.png" class="cin"> <code>Bed Adhesion</code> (skirt or brim) to a <img src="../../components/Toolpath.png" class="cin"> <code>Toolpath</code> to prime the nozzle and enhance stability and adhesion.</p>
 
 
 

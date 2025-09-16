@@ -1078,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material/mixing-materials/mixing-materials.html" class="md-nav__link">
         
   
   
@@ -1101,30 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Transitional behavior
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../multi-material.md" class="md-nav__link">
+      <a href="../../multi-material/gradient-printing/gradient-printing.html" class="md-nav__link">
         
   
   
@@ -1279,6 +1256,12 @@ Second row: a porous panel, after Erwin Hauer (1) (2); a Diamond-TPMS-inspired c
 <h2 id="representing-the-extruded-volume">Representing the extruded volume</h2>
 <p>An important application of <img src="../../components/ToolpathMesh.png" class="cin"> <code>Toolpath Mesh</code> is to create a mesh that represents the extruded volume. A Toolpath can be offsetted on both sides by <img src="../../components/OffsetToolpath.png" class="cin"> <code>Offset Toolpath</code> to 
 form a "pseudo-Toolpath" whose region represented the extruded volume (see <a href="../../slicing/toolpath-operations/toolpath-operations.html#offsetting-toolpaths">Offsetting Toolpaths</a>). The Toolpath mesh of this "pseudo-Toolpath" is a <strong>closed, maniford mesh</strong> representing the extruded volume. It is a compact mesh for <strong>finite-element analysis</strong> (FEA). Since it is reconstructed from the Toolpath, the FEA will reflect all modified details of the Toolpath.</p>
+<figure>
+<p><img alt="" src="8.%20Extruded%20Volume%20Toolpath%20Mesh.gif" /></p>
+<figcaption>
+<p>Toolpath mesh as the extruded volume, showing different widths of extrusion</p>
+</figcaption>
+</figure>
 <h2 id="surface-toolpath-twins_1">Surface-toolpath twins</h2>
 <p>The efficient and effective surface reconstruction algorithm brings about a new view of toolpath design. It is no longer a <strong>unidirectional</strong> process. </p>
 <p>The surface and the Toolpath are now syncronized to form what we call the "<strong>surface-toolpath twins</strong>". The design-to-production process is now <strong>bidirectional</strong>:
@@ -1289,7 +1272,7 @@ One can plug and play different form-finding results, assess and optimize their 
 <figure>
 <p><img alt="" src="workflow-diagram-twins-sm%2Bmm.png" /></p>
 <figcaption>
-<p>Framework overview highlighting the surface-toolpath twins</p>
+<p>The Ovenbird framework highlighting the surface-toolpath twins</p>
 </figcaption>
 </figure>
 </div>
@@ -1297,12 +1280,18 @@ One can plug and play different form-finding results, assess and optimize their 
 <figure>
 <p><img alt="" src="workflow-diagram-twins-sm.png" /></p>
 <figcaption>
-<p>Framework overview highlighting the surface-toolpath twins (single-material only)</p>
+<p>The Ovenbird framework highlighting the surface-toolpath twins (single-material only)</p>
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
+<p>Below is a minimal example of utilizing the surface-toolpath twin idea to reconstruct a surface from a limited number of curves. The surface is then refined and sliced to have denser layers.</p>
+<figure>
+<p><img alt="" src="9.%20Surface%20From%20Toolpath.gif" /></p>
+<figcaption></figcaption>
+</figure>
+<p>For a comprehensive introduction to the proposed bidirectional workflow, please refer to our upcoming paper.</p>
 
 
 

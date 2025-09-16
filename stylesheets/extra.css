@@ -121,3 +121,12 @@ img.hi{
   padding-left: auto !important;
   padding-right: auto !important;
 }
+
+
+.katex-display {
+  margin: -16px 0 !important;
+}
+
+.arithmatex {
+  margin: 0 !important;
+}
