@@ -1347,7 +1347,7 @@ Extrusion-based 3D printing favors such continuous toolpaths to minimize the sea
 <p>The nozzle is seen as a cylinder with a height <span class="arithmatex">\(h_\mathrm{nozzle}\)</span>. Only this part of the extruder is allowed to go below the highest point of the printed part. Equivalently, the maximal height difference between the highest printed layer and the lowest unprinted layer should not exceed <span class="arithmatex">\(h_\mathrm{nozzle}\)</span>. We may assume by fulfilling the criterion of <span class="arithmatex">\(h_\mathrm{nozzle}\)</span>, the Continuous Toolpath is made collision-free. (1)</p>
 </li>
 <li>
-<p>Optionally, if a clearance is given, <img src="../../components/ContinuousPrinting.png" class="cin"> <code>Continuous Printing</code> checks the collision between pairs of curves and  to fully ensures that the Continuous Toolpath is collision-free. This takes a longer time than relying solely on the noozle height constraint.</p>
+<p>Optionally, if a clearance is given, <img src="../../components/ContinuousPrinting.png" class="cin"> <code>Continuous Printing</code> checks the <strong>collision</strong> between pairs of curves and  to fully ensures that the Continuous Toolpath is collision-free. This takes a longer time than relying solely on the noozle height constraint.</p>
 </li>
 </ol>
 </div>
