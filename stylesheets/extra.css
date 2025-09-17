@@ -4,6 +4,14 @@
   vertical-align:-0.2em !important;
 }
 
+img.si{
+  display: inline-block !important;
+  height: 1.5em !important;
+  vertical-align:-0.4em !important;
+  padding-left: auto !important;
+  padding-right: auto !important;
+}
+
 
 /* 1031.81px 190mm */
 img.w10  { max-width: calc(1031.81px * 10 / 190); width: 100%; }
@@ -115,13 +123,6 @@ img.w190 { max-width: calc(1031.81px * 190 / 190); width: 100%; }
   display: inline-block !important;
 }
 
-img.hi{
-  display: block !important;
-  height: 5em !important;
-  padding-left: auto !important;
-  padding-right: auto !important;
-}
-
 
 .katex-display {
   margin: -16px 0 !important;
@@ -129,4 +130,68 @@ img.hi{
 
 .arithmatex {
   margin: 0 !important;
+}
+
+
+
+
+
+.grid {
+  display: grid;
+  /* Each item is at least 220px; grid makes as many columns as fit */
+  gap: 10px        !important;    /* space between items */
+  align-items: start;   /* top-align like inline flow */
+}
+
+.grid3 {
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr)) !important;
+}
+
+.grid4 {
+  grid-template-columns: repeat(auto-fit, minmax(11em, 1fr)) !important;
+}
+
+.card {
+  /* looks like an inline box */
+  padding: 10px !important;
+}
+
+.grid-no-border {
+  gap: 4px !important;
+}
+
+.grid-no-border .card {
+  border: none !important;
+}
+
+.grid-center .card {
+  display: flex !important;
+  flex-direction: column !important; 
+  align-items: center !important;
+  padding-top: 10px !important;   
+  padding-bottom: 10px !important;   
+}
+
+.grid-authors .card img {
+  display: block;
+  margin: 0 auto;          /* centers the image only */
+  /* max-width: 100px; */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  /* border-radius: 50%; */
+  padding-bottom: 5px;
+}
+
+.grid-authors .card a,
+.grid-authors .card
+{
+  text-align: center;      /* centers text separately */
+}
+
+.grid-long-logos .card img {
+  max-height: 70px !important;
+}
+
+img.fillet {
+  border-radius: 5px;
 }

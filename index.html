@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -74,12 +76,29 @@
     <div data-md-component="skip">
       
         
-        <a href="#key-features" class="md-skip">
+        <a href="#selected-projects-powered-by-ovenbird" class="md-skip">
           Skip to content
         </a>
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+  📢 The first ever <a href="https://www.aag2025.com/workshop-3">Ovenbird workshop</a> will be held on Nov 16-17 2025 in Boston as part of the Advances in Architectural Geometry conference!
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
       
     </div>
     
@@ -404,18 +423,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#selected-projects-powered-by-ovenbird" class="md-nav__link">
     <span class="md-ellipsis">
-      Key features
+      Selected projects powered by Ovenbird
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#projects-powered-by-ovenbird" class="md-nav__link">
+  <a href="#team" class="md-nav__link">
     <span class="md-ellipsis">
-      Projects powered by Ovenbird
+      Team
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-product-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      A product of
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported by
     </span>
   </a>
   
@@ -1219,163 +1256,183 @@
 
 
 <style>
-
 .md-content {
     max-width: 1031.81px;
 }
-
-.diagram-cards .card,
-.filled-cards .card {
-    background-size: cover; 
-    background-position: center; 
-    min-height: 10rem;
-}
-
-.filled-cards .card {
-    border: none !important;
-}
-
-.filled-cards .card,
-.filled-cards .card a {
-    color: white !important;
-    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-}
-.filled-cards .card img {
-  filter: grayscale(100%);
-}
-
-.filled-cards .card {
-  position: relative;
-  overflow: hidden;
-  background-image: url('multi-material-cover.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.filled-cards .card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  filter: grayscale(100%);
-  z-index: 0;
-}
-
-/* Add overlay for accent color */
-.filled-cards .card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #ef5552;
-  mix-blend-mode: color; /* or overlay, hue, color */
-  opacity: 0.3; /* tweak as needed */
-  z-index: 0;
-}
-
-.filled-cards .card > * {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-banner {
-  width: 100vw;          /* full viewport width */
-  margin-left: calc(-50vw + 50%); /* break out of centered container */
-  min-height: calc(100vh - 48px - 48px - 45px - 30px);
-  /* background:  #ef5552; */
-  color: white;
-  text-align: center;
-  /* padding: 4rem 2rem; */
-  border-radius: 0;
-}
-
 </style>
 
-<!-- <h1 style="text-align: center; font-size: 2rem; color: black; font-weight: 500; margin-top: 3rem; margin-bottom: 0; padding-bottom: 0;">Ovenbird</h1> -->
-<!-- <p style="text-align: center; font-size: 1.5rem; color: black; font-weight: 500; margin-top: 0; padding-bottom: 2rem;">Concrete and multi-material printing in Grasshopper</p> -->
-
-<!-- <div class="hero-banner"> -->
 <h1>Ovenbird: Concrete and Multi-Material 3D Printing</h1>
 
-<!-- <div style="max-width: 750px"> -->
-
-<p>Ovenbird is a free Grasshopper plug-in that generates, analyzes, and optimizes 3D printing toolpaths for concrete and other large-format materials with the extended functionality of gradient multi-material printing.</p>
-<!-- <br> -->
 <!-- <strong>This site is work in progress.</strong> -->
-<!-- </div> -->
 
-<!-- <br> -->
+<!-- <img src="index/workflow-diagram-sm+mm.png"></img> -->
+<!-- <img class="fillet" style="width: 100%" src="index/Ovenbird.gif"></img>  -->
 
-<!-- ![banner](){.w90} -->
-<!-- <img class="w140" src="index/mwe.png"></img> -->
-<!-- /// caption -->
-<p><a class="md-button md-button--primary" href="getting-started/installation/installation.md">Get Started</a>
+<p>Ovenbird is a free Grasshopper plug-in that generates, analyzes, and optimizes 3D printing toolpaths for concrete and other large-format materials with the extended functionality of gradient multi-material printing. </p>
+<p><a class="md-button md-button--primary" href="getting-started/installation/installation.html">Get Started</a>
 <a class="md-button" href="https://www.food4rhino.com/en/app/ovenbird">Download Ovenbird</a></p>
-<!-- /// -->
-<!-- <br> -->
+<p>&nbsp;</p>
+<h2>Key features</h2>
+<div class="grid grid3">
+<div class="card">
+<a href="getting-started/first-example/first-example.html"><img src="components/ExampleFiles.png" class="si"> Embedded examples</a>
+</div>
 
-<!-- </div> -->
+<div class="card">
+<a href="slicing/slicing-options/slicing-options.html"><img src="components/Slice.png" class="si"> Non parallel slicing</a>
+</div>
 
-<!-- Latest release available on [food4Rhino](). -->
+<div class="card">
+<a href="slicing/continuous-printing/continuous-printing.html"><img src="components/ContinuousPrinting.png" class="si"> Continuous printing</a>
+</div>
 
-<h2 id="key-features">Key features</h2>
-<div class="grid cards diagram-cards">
-<div class="card" style="background-image: url('multi-material-cover.jpg');">
-<p><a href="123"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Embedded examples</strong></a>
-<img src="components/ExampleFiles.png" class="hi"></p>
+<div class="card">
+<a href="io/visualization/visualization.html"><img src="components/VisualizePrinting.png" class="si"> Agile visualization</a>
 </div>
-<div class="card" style="background-image: url('multi-material-cover.jpg');">
-<p><a href="123"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Non parallel slicing</strong></a></p>
-</div>
-<div class="card" style="background-image: url('multi-material-cover.jpg');">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Continuous printing</strong></p>
-</div>
-<div class="card" style="background-image: url('multi-material-cover.jpg');">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Agile visualization</strong></p>
-</div>
-<div class="card" style="background-image: url('scaled-fabrication-model-cover.jpg');">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Buildability optimization</strong></p>
-</div>
-<div class="card" style="background-image: url('scaled-fabrication-model-cover.jpg');">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Surface quality optimization</strong></p>
-</div>
-<div class="card" style="background-image: url('scaled-fabrication-model-cover.jpg');">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Surface-toolpath twins</strong></p>
-</div>
-<div class="card" style="background-image: url('multi-material-tension-compression-cover.jpg');">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Gradient multi-material printing</strong></p>
-</div>
-</div>
-<h2 id="projects-powered-by-ovenbird">Projects powered by Ovenbird</h2>
-<div class="grid cards filled-cards">
-<div class="card" style="background-image: url('index/ecc-cover.jpg');">
-<p><a href="https://psl.design.upenn.edu/project/european-cultural-centre-exhibition/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>European cultural centre exhibition</strong></a></p>
-</div>
-<div class="card" style="background-image: url('index/diamanti-cover.jpg');">
-<p><a href="https://psl.design.upenn.edu/project/diamanti-3d-printed-post-tensioned-concrete-canopy/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>3D-printed, post-tensioned concrete canopy</strong></a></p>
-</div>
-<div class="card" style="background-image: url('index/eh-cover.jpg');">
-<p><a href="https://psl.design.upenn.edu/project/automated-toolpath-design-of-3d-concrete-printing-structural-components/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>3D-printed Erwin Hauer</strong></a></p>
-</div>
-<div class="card" style="background-image: url('index/multi-material-cover.jpg');">
-<p><a href="https://psl.design.upenn.edu/project/prototyping-high-fidelity-multifunctional-objects-using-single-nozzle-multi-filament-additive-manufacturing-system-with-active-mixing/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Gradient multi-material printing</strong></a></p>
-</div>
-<div class="card" style="background-image: url('index/itti-cover.jpg');">
-<p><a href="https://psl.design.upenn.edu/project/integrated-and-tailored-thermal-insulation-through-gradient-multimaterial-additive-manufacturing-for-masonry-architectural-components/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Integrated and tailored thermal insulation</strong></a></p>
-</div>
-<div class="card" style="background-image: url('index/multi-material-tension-compression-cover.jpg');">
-<p><a href="https://psl.design.upenn.edu/project/continuous-multi-filament-3d-printing/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Multi-filament tension-compression structures</strong></a></p>
-</div>
-</div>
-<!-- Ovenbird applies to extrusion-based 3D printing across scales and materials (clay, thermoplastic, etc.). -->
 
-<!-- (ii) multi-material gradient printing. -->
-<!-- The method of shell printing is typically used by architectural scale concrete 3D printing to reduce waste. -->
+<div class="card">
+<a href="optimizations/buildability-analysis/buildability-analysis.html"><img src="components/LocalOverhang.png" class="si"> Buildability analysis</a>
+</div>
 
-<!-- The goal of Ovenbird is to streamline the toolpathing process between design and production. Its functions can be summarized in three aspects: -->
+<div class="card">
+<a href="optimizations/buildability-optimizations/buildability-optimizations.html"><img src="components/OverhangOptimization.png" class="si"> Buildability optimization</a>
+</div>
 
-<!-- + **Single-material printing**. It enables auto-oriented, non-parallel slicing for material extrusion 3D printing with post-slicing optimization features with the generation of GCodes and visualization functions.
-+ **Continuous printing**. It enables slicing for continuous printing with a minimal number of on-and-offs accompanied by topological analysis.
-+ **Multi-material printing** (Currently Ovenbird 1 only). It enables slicing and optimization for multi-material printing through a singular-nozzle multi-cartridge system with the generation of GCodes and visualization functions. -->
+<div class="card">
+<a href="optimizations/layer-level-optimizations/layer-level-optimizations.html"><img src="components/SmoothToolpath.png" class="si"> Surface quality optimization</a>
+</div>
+
+<div class="card">
+<a href="io/surface-toolpath-twins/surface-toolpath-twins.html"><img src="components/ToolpathMesh.png" class="si"> Surface-toolpath twins</a>
+</div>
+
+<div class="card">
+<a href="multi-material/multi-material-overview/multi-material-overview.html"><img src="components/MultiMaterialPrinting.png" class="si"> Gradient multi-material printing</a>
+</div>
+
+</div>
+
+<p>&nbsp;</p>
+<h2 id="selected-projects-powered-by-ovenbird">Selected projects powered by Ovenbird</h2>
+<div class="grid grid3 grid-no-border">
+
+<div class="card">
+<a href="https://psl.design.upenn.edu/project/european-cultural-centre-exhibition/">
+<img class="fillet" src="index/ecc-cover.jpg">
+European cultural centre exhibition</a>
+</div>
+
+<div class="card">
+<a href="https://psl.design.upenn.edu/project/diamanti-3d-printed-post-tensioned-concrete-canopy/">
+<img class="fillet" src="index/diamanti-cover.jpg">
+3D-printed, post-tensioned concrete canopy
+</a>
+</div>
+
+<div class="card">
+<a href="https://psl.design.upenn.edu/project/automated-toolpath-design-of-3d-concrete-printing-structural-components/">
+<img class="fillet" src="index/eh-cover.jpg">
+3D-printed Erwin Hauer
+</a>
+</div>
+
+<div class="card">
+<a href="https://psl.design.upenn.edu/project/prototyping-high-fidelity-multifunctional-objects-using-single-nozzle-multi-filament-additive-manufacturing-system-with-active-mixing/">
+<img class="fillet" src="index/multi-material-cover.jpg">
+Gradient multi-material printing
+</a>
+</div>
+
+<div class="card">
+<a href="https://psl.design.upenn.edu/project/integrated-and-tailored-thermal-insulation-through-gradient-multimaterial-additive-manufacturing-for-masonry-architectural-components/">
+<img class="fillet" src="index/itti-cover.jpg">
+Integrated and tailored thermal insulation
+</a>
+</div>
+
+<div class="card">
+<a href="https://psl.design.upenn.edu/project/continuous-multi-filament-3d-printing/">
+<img class="fillet" src="index/multi-material-tension-compression-cover.jpg">
+Multi-filament tension-compression structures
+</a>
+</div>
+
+&nbsp;
+
+</div>
+
+<h2 id="team">Team</h2>
+<div class="grid grid4 grid-no-border grid-authors grid-center">
+
+<div class="card">
+<a href="https://yefan-zhi.github.io/">
+<img class="fillet" src="about/about-ovenbird/Yefan Zhi.jpg">
+Yefan Zhi</a>
+</div>
+
+<div class="card">
+<a href="https://psl.design.upenn.edu/team/hua-chai/">
+<img class="fillet" src="about/about-ovenbird/Hua Chai.jpg">
+Hua Chai
+</a>
+</div>
+
+<div class="card">
+<a href="https://psl.design.upenn.edu/team/teng-teng/">
+<img class="fillet" src="about/about-ovenbird/Teng Teng.jpg">
+Teng Teng
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.design.upenn.edu/people/masoud-akbarzadeh">
+<img class="fillet" src="about/about-ovenbird/Masoud Akbarzadeh.jpg">
+Masoud Akbarzadeh
+</a>
+</div>
+
+</div>
+<p>&nbsp;</p>
+<h2 id="a-product-of">A product of</h2>
+<div class="grid grid4 grid-no-border grid-center grid-long-logos">
+
+<div class="card">
+<a href="https://psl.design.upenn.edu/">
+<img class="fillet" src="about/about-ovenbird/psl_logo-bw.png">
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.design.upenn.edu/">
+<img class="fillet" src="about/about-ovenbird/weitzman.png">
+</a>
+</div>
+
+<div class="card">
+<a href="https://pennovation.upenn.edu/">
+<img class="fillet" src="about/about-ovenbird/PennovationWorks-Stacked-WithTagline.webp">
+</a>
+</div>
+
+</div>
+
+<p>&nbsp;</p>
+<h2 id="supported-by">Supported by</h2>
+<div class="grid grid4 grid-no-border grid-center grid-long-logos">
+
+<div class="card">
+<a href="https://arpa-e.energy.gov/">
+<img class="fillet" src="about/about-ovenbird/arpae.svg">
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.nsf.gov/">
+<img class="fillet" src="about/about-ovenbird/nsf-logo-w-name-2022.jpg">
+</a>
+</div>
+
+</div>
 
 
 
@@ -1443,6 +1500,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 - 2025 Ovenbird
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -1463,7 +1524,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "toc.follow", "toc.integrate", "content.code.copy", "navigation.footer", "content.tabs.link"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "toc.follow", "toc.integrate", "content.code.copy", "navigation.footer", "content.tabs.link", "announce.dismiss"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.50899def.min.js"></script>
@@ -1473,6 +1534,8 @@
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       
     
   </body>
