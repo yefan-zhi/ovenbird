@@ -132,10 +132,6 @@ img.w190 { max-width: calc(1031.81px * 190 / 190); width: 100%; }
   margin: 0 !important;
 }
 
-
-
-
-
 .grid {
   display: grid;
   /* Each item is at least 220px; grid makes as many columns as fit */
@@ -186,6 +182,10 @@ img.w190 { max-width: calc(1031.81px * 190 / 190); width: 100%; }
 .grid-authors .card
 {
   text-align: center;      /* centers text separately */
+}
+
+.grid-long-logos {
+  align-items: center !important;   /* center vertically */
 }
 
 .grid-long-logos .card img {
