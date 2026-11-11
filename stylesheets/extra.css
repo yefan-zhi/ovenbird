@@ -183,3 +183,45 @@
   .grid-long-logos .card img {
     max-height: 70px !important;
   }
+
+  /* BibTeX copy toast */
+  .bibtex-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translate(-50%, 1rem);
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.3rem;
+    background: var(--md-default-fg-color);
+    color: var(--md-default-bg-color);
+    font-size: 0.75rem;
+    box-shadow: var(--md-shadow-z2);
+    opacity: 0;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .bibtex-toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  .bibtex-copy {
+    cursor: pointer;
+    color: var(--md-typeset-a-color);
+  }
+
+  .bibtex-copy:hover {
+    color: var(--md-accent-fg-color);
+  }
+
+  /* Image captions: 1.6x Material's default max-width (24rem) */
+  .md-typeset figcaption {
+    max-width: 38.4rem;
+  }
+
+  /* No hover tooltips on header icons (content.tooltips adds them) */
+  .md-header .md-tooltip {
+    display: none !important;
+  }

@@ -83,6 +83,23 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+  📢 2026-11-11: Ovenbird 2.4.2.1 is out with essential updates. Read the log <a href="/ovenbird/about/change-log/change-log.html#version-2421-2026-11-11">here</a>.
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
     </div>
     
     
@@ -680,15 +697,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#transformations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transformations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#bed-adhesion" class="md-nav__link">
     <span class="md-ellipsis">
       Bed Adhesion
@@ -698,9 +706,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reorder-toolpath" class="md-nav__link">
+  <a href="#toolpath-regions" class="md-nav__link">
     <span class="md-ellipsis">
-      Reorder Toolpath
+      Toolpath Regions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-toolpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspect Toolpath
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformations
     </span>
   </a>
   
@@ -1030,7 +1056,7 @@
   
   
   <span class="md-ellipsis">
-    Scaled Fabrication Models
+    Scaled fabrication models
     
   </span>
   
@@ -1275,75 +1301,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/aag-workshop-2025/aag-workshop-2025.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    AAG Workshop 2025
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/upenn-arch-7040-2026/upenn-arch-7040-2026.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    UPenn ARCH 7040 2026
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/ucalgary-workshop-2026/ucalgary-workshop-2026.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    UCalgary ARCH 698.06 2026
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1367,31 +1324,38 @@
 
 
 
-<h1 id="quick-methods">Quick methods</h1>
-<h2 id="clean-toolpath">Clean Toolpath</h2>
-<p><img src="../../components/CleanToolpath.png" class="cin"> <code>Clean Toolpath</code> culls the short curves from the Toolpath and make open curves closed if necessary. It is a handy first step after <img src="../../components/Slice.png" class="cin"> <code>Slice</code>.</p>
-<h2 id="polyline-toolpath">Polyline Toolpath</h2>
-<p><img src="../../components/PolylineToolpath.png" class="cin"> <code>Polyline Toolpath</code> converts a Toolpath that might contain NURBS curves to a Toolpath of pure polylines. This is a necessary step if certain operations such as <img src="../../components/SmoothToolpath.png" class="cin"> <code>Smooth Toolpath</code> and <img src="../../components/OverfillOptimization.png" class="cin"> <code>Overfill Optimization</code> are to be performed. The resolution of the polyline Toolpath will also affect the results of these polyline-based operations.</p>
+<h1 id="quick-methods">Quick methods<a class="headerlink" href="#quick-methods" title="Permanent link">&para;</a></h1>
+<p>The first 5 quick methods are showcased here:</p>
+<div class="admonition example-block">
+<p class="admonition-title">Example File</p>
+<p><code>3. Toolpath Operations → (1) Clean and Polyline Toolpath</code></p>
+</div>
+<h2 id="clean-toolpath">Clean Toolpath<a class="headerlink" href="#clean-toolpath" title="Permanent link">&para;</a></h2>
+<p><img src="../../components/CleanToolpath.png" class="cin"> <code>Clean Toolpath</code> is a handy first step after <img src="../../components/Slice.png" class="cin"> <code>Slice</code>. You can configure it to 
+(1) culls <strong>short curves</strong>;
+(2) cull or close <strong>open curves</strong>; and
+(3) trim <strong>empty layers</strong>.</p>
+<h2 id="polyline-toolpath">Polyline Toolpath<a class="headerlink" href="#polyline-toolpath" title="Permanent link">&para;</a></h2>
+<p><img src="../../components/PolylineToolpath.png" class="cin"> <code>Polyline Toolpath</code> converts a Toolpath that might contain NURBS curves to a Toolpath of pure polylines. This is a necessary step if certain operations such as <img src="../../components/SmoothToolpath.png" class="cin"> <code>Smooth Toolpath</code> and <img src="../../components/OverfillOptimization.png" class="cin"> <code>Overfill Optimization</code> are to be performed. The resolution of the polyline Toolpath will also affect the results of these polyline-based operations and the memory used in Grasshopper. Read the description of <img src="../../components/PolylineToolpath.png" class="cin"> <code>Polyline Toolpath</code> for details of the polyline methods.</p>
 <figure>
-<p><img alt="" class="w140" src="polyline.png" /></p>
+<p><img alt="" class="w90" src="polyline.png" /></p>
 <figcaption>
 <p>Methods of generating a polyline Toolpath. Right-click the component to configure</p>
 </figcaption>
 </figure>
-<h2 id="transformations">Transformations</h2>
+<h2 id="bed-adhesion">Bed Adhesion<a class="headerlink" href="#bed-adhesion" title="Permanent link">&para;</a></h2>
+<p>We can add <img src="../../components/BedAdhesion.png" class="cin"> <code>Bed Adhesion</code> (skirt or brim) to a <img src="../../components/Toolpath.png" class="cin"> <code>Toolpath</code> to prime the nozzle and enhance stability and adhesion. </p>
+<h2 id="toolpath-regions">Toolpath Regions<a class="headerlink" href="#toolpath-regions" title="Permanent link">&para;</a></h2>
+<p><img src="../../components/ToolpathRegions.png" class="cin"> <code>Toolpath Regions</code> shows how closed Toolpath curves form regions (planar trimmed surfaces). Read <a href="../toolpath-operations/toolpath-operations.html#regions">Regions</a> for more details.</p>
+<h2 id="inspect-toolpath">Inspect Toolpath<a class="headerlink" href="#inspect-toolpath" title="Permanent link">&para;</a></h2>
+<p><img src="../../components/InspectToolpath.png" class="cin"> <code>Inspect Toolpath</code> lays out all layers of a Toolpath and is handy for inspecting its details and comparing multiple Toolpaths. </p>
+<h2 id="transformations">Transformations<a class="headerlink" href="#transformations" title="Permanent link">&para;</a></h2>
 <p><img src="../../components/Toolpath.png" class="cin"> <code>Toolpath</code>, <img src="../../components/ContinuousToolpath.png" class="cin"> <code>Continuous Toolpath</code>, and <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code> objects can be transformed using native Grasshopper methods so long as the transformation is Euclidean (can be a combination of translation, rotation, and mirroring, with a determinant of <span class="arithmatex">\(\pm 1\)</span>).</p>
-<p class="annotate">We also provide specific components for transformation such as <img src="../../components/MoveToolpath.png" class="cin"> <code>Move Toolpath</code>, <img src="../../components/RotateToolpath.png" class="cin"> <code>Rotate Toolpath</code>, <img src="../../components/MirrorToolpath.png" class="cin"> <code>Mirror Toolpath</code>, <img src="../../components/OrientToolpath.png" class="cin"> <code>Orient Toolpath</code>, and <img src="../../components/ScaleToolpath.png" class="cin"> <code>Scale Toolpath</code>. Note that the <strong>base plane</strong> of the Toolpath is used as a system of reference. (1) </p>
-<ol>
-<li>
-<div class="admonition example-inline">
+<p>We also provide specific components for transformation such as <img src="../../components/MoveToolpath.png" class="cin"> <code>Move Toolpath</code>, <img src="../../components/RotateToolpath.png" class="cin"> <code>Rotate Toolpath</code>, <img src="../../components/MirrorToolpath.png" class="cin"> <code>Mirror Toolpath</code>, <img src="../../components/OrientToolpath.png" class="cin"> <code>Orient Toolpath</code>, and <img src="../../components/ScaleToolpath.png" class="cin"> <code>Scale Toolpath</code>. Note that the <strong>base plane</strong> of the Toolpath is used as a system of reference. </p>
+<div class="admonition example-block">
 <p class="admonition-title">Example File</p>
-<code>3. Toolpath Operations → Transform Toolpath</code></div>
-</li>
-</ol>
-<h2 id="bed-adhesion">Bed Adhesion</h2>
-<p>We can add <img src="../../components/BedAdhesion.png" class="cin"> <code>Bed Adhesion</code> (skirt or brim) to a <img src="../../components/Toolpath.png" class="cin"> <code>Toolpath</code> to prime the nozzle and enhance stability and adhesion.</p>
-<h2 id="reorder-toolpath">Reorder Toolpath</h2>
-<p>In <img src="../../components/ReorderToolpath.png" class="cin"> <code>Reorder Toolpath</code>, we offer several solvers to minimize the travel length of printing. You can find detailed description of our solvers to this variant of the Traveling Salesman Problem (TSP), which is NP-hard.</p>
+<p><code>3. Toolpath Operations → (2) Transform Toolpath</code></p>
+</div>
 
 
 
@@ -1399,6 +1363,41 @@
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 21:59:48 UTC">November 11, 2026</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      Yefan Zhi
+    </nav>
+  </span>
+
+    
+    
+  </aside>
 
 
 
@@ -1480,6 +1479,26 @@
   
 </div>
       
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/KehxvuacDk" target="_blank" rel="noopener" title="Discord" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:yefanzhi@gmail.com" target="_blank" rel="noopener" title="Email" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1492,12 +1511,14 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "toc.follow", "toc.integrate", "content.code.copy", "navigation.footer", "content.tabs.link", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "toc.follow", "toc.integrate", "content.code.copy", "content.tooltips", "navigation.footer", "content.tabs.link", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
         <script src="../../javascripts/katex.js"></script>
+      
+        <script src="../../javascripts/bibtex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       

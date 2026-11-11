@@ -83,6 +83,23 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+  📢 2026-11-11: Ovenbird 2.4.2.1 is out with essential updates. Read the log <a href="/ovenbird/about/change-log/change-log.html#version-2421-2026-11-11">here</a>.
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
     </div>
     
     
@@ -938,7 +955,7 @@
   
   
   <span class="md-ellipsis">
-    Scaled Fabrication Models
+    Scaled fabrication models
     
   </span>
   
@@ -1266,75 +1283,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/aag-workshop-2025/aag-workshop-2025.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    AAG Workshop 2025
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/upenn-arch-7040-2026/upenn-arch-7040-2026.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    UPenn ARCH 7040 2026
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/ucalgary-workshop-2026/ucalgary-workshop-2026.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    UCalgary ARCH 698.06 2026
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1358,26 +1306,32 @@
 
 
 
-<h1 id="gradient-printing">Gradient printing</h1>
-<h2 id="seam-defect">Seam defect</h2>
+<h1 id="gradient-printing">Gradient printing<a class="headerlink" href="#gradient-printing" title="Permanent link">&para;</a></h1>
+<h2 id="seam-defect">Seam defect<a class="headerlink" href="#seam-defect" title="Permanent link">&para;</a></h2>
 <p>For multi-material closed curves, the original seam in a single-material <img src="../../components/Toolpath.png" class="cin"> <code>Toolpath</code> is naturally replaced by one of the material changes in the <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code> to minimize the number of single-material segments. Consequently, the curve starts and ends with different materials, which introduces a visible multi-material seam defect without gradient transition. This defect can be replaced with gradient transition by having the seam of the multi-material curve at the middle of any of the single-material segments.</p>
 <figure>
 <p><img alt="" class="w90" src="mm-data-structure-1.png" /></p>
 <figcaption>
-<p>Multi-material seam defect</p>
+<p class="annotate">Multi-material seam defect (1)</p>
+<ol>
+<li>Image adapted from: Y. Zhi, T. Teng, and M. Akbarzadeh, “<a href="https://github.com/yefan-zhi/yefan-zhi-publications/blob/main/029%20As-Continuous-As-Possible%20Multi-Material%20Extrusion%20with%20Gradient%20Composition%20and%20Transition%20(Author's%20Version).pdf">As-Continuous-As-Possible Multi-Material Extrusion with Gradient Composition and Transition</a>,” in <em>Proceedings of ACADIA</em>, Detroit, MI, Oct. 2026. <a href="https://github.com/yefan-zhi/yefan-zhi-publications/blob/main/029%20As-Continuous-As-Possible%20Multi-Material%20Extrusion%20with%20Gradient%20Composition%20and%20Transition%20(Author's%20Version).pdf" title="Download PDF"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M208 48H96c-8.8 0-16 7.2-16 16v384c0 8.8 7.2 16 16 16h80v48H96c-35.3 0-64-28.7-64-64V64C32 28.7 60.7 0 96 0h133.5c17 0 33.3 6.7 45.3 18.7l122.5 122.6c12 12 18.7 28.3 18.7 45.3v149.5h-48v-128h-88c-39.8 0-72-32.2-72-72v-88zm140.1 112L256 67.9V136c0 13.3 10.7 24 24 24zM240 380h32c33.1 0 60 26.9 60 60s-26.9 60-60 60h-12v28c0 11-9 20-20 20s-20-9-20-20V400c0-11 9-20 20-20m32 80c11 0 20-9 20-20s-9-20-20-20h-12v40zm96-80h32c28.7 0 52 23.3 52 52v64c0 28.7-23.3 52-52 52h-32c-11 0-20-9-20-20V400c0-11 9-20 20-20m32 128c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12h-12v88zm76-108c0-11 9-20 20-20h48c11 0 20 9 20 20s-9 20-20 20h-28v24h28c11 0 20 9 20 20s-9 20-20 20h-28v44c0 11-9 20-20 20s-20-9-20-20z"/></svg></span></a> <a class="bibtex-copy" role="button" tabindex="0" title="Copy BibTeX" data-bibtex="@InProceedings{Zhi-2026-Multi-Material-3DP,&#10;    author    = {Yefan Zhi and Teng Teng and Masoud Akbarzadeh},&#10;    booktitle = {Proceedings of the 46th Annual Conference of the Association for Computer-Aided Design in Architecture (ACADIA)},&#10;    title     = {As-Continuous-As-Possible Multi-Material Extrusion with Gradient Composition and Transition},&#10;    year      = {2026},&#10;    address   = {Detroit, MI, USA},&#10;    editor    = {Teng Teng and Sara Codarin and Gretchen Wilkins},&#10;    month     = {October 22-24},&#10;    publisher = {Association for Computer-Aided Design in Architecture (ACADIA)}&#10;}"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M620.8 95.4c-30.8.4-42.1 16.6-47.7 24.5l-.1.1-55.7 80.5 82.8 121.1c7.5 10.6 11.3 12.5 35.4 12.5v9.1c-9.1-.7-28-.7-37.7-.7-12.4 0-30.8 0-42.9.7v-9.1c13.2-.8 16.6-7.3 16.6-10.2 0-1.1 0-2.3-3-6.4L503 221.2l-60.2 87.9c-1.9 2.7-3.8 5.4-3.8 10.2 0 6.1 3.4 13.6 15 14.7v9.1c-9.4-.7-27.1-.7-37.2-.7H414L402.3 425H206.4v-9.1c26.7 0 30.9 0 30.9-16.9V195.8c0-16.9-4.3-16.9-30.9-16.9v-10.3h19.8c-4.8-61.1-10.8-71.7-68-71.8h-20.7c-6.8 1.5-6.8 6.1-6.8 14.4v205c0 13.6 1.1 17.8 32.4 17.8h10.5v9.1h-.4c-17.9-.3-36.7-.7-54.9-.7s-36.9.3-54.8.7h-.6V334h10.7c31.7 0 32.8-4.1 32.8-17.8v-205c0-8.7 0-13.2-7.2-14.3H78.4c-58.4 0-63.7 10.9-68.6 73.3H3l6.3-83.3h217.5l6.1 81.8H397l9 83.3h-6.8c-5.3-49.8-12.1-73-70.3-73h-51.5c-15 0-15.8 1.9-15.8 14.6v93.3h35.5c35.5 0 38.9-12.8 38.9-44h6v97.9h-6c0-31.8-3.4-44.8-38.9-44.8h-35.5v105.2c0 13 .7 14.8 15.8 14.8h52.2c61.1 0 69.9-25.8 77.4-73.6-7.7 0-16.3.2-22.2.7V334c7.2 0 31.7-.4 47.8-23.8l65.5-95.7-72.7-106.7c-8.3-11.7-15.1-12.5-35.8-12.5v-9.1c9.1.7 27.9.7 37.7.7 12.4 0 30.8 0 42.9-.7v9.1c-12.5.4-16.6 6.8-16.6 10.2 0 1.1.4 2.3 3 6.4l55.7 81.6 49.7-72.1c2.7-3.7 4.5-6.8 4.5-11.3 0-6.1-3-13.6-15-14.8v-9.1c9.4.7 24.8.7 37.2.7 9 0 23.3 0 32-.7v9.1z"/></svg></span></a></li>
+</ol>
 </figcaption>
 </figure>
-<h2 id="wipe-units">Wipe units</h2>
+<h2 id="wipe-units">Wipe units<a class="headerlink" href="#wipe-units" title="Permanent link">&para;</a></h2>
 <p>Now the nozzle will enter and exit with the same material, called the <strong>transit material</strong>. 
 When the nozzle travels between two curves of different transit materials, a wiping stop is needed. The nozzle typically extrudes somewhere off the print body to complete the material transition. For each transition, we place a rectangle curve known as a <strong>wipe unit</strong> whose length should be greater than the transitional length <span class="arithmatex">\(L_{2}\)</span>, preferably with a factor. To place the wipe units, a <img src="../../components/MultiMaterialPrintBed.png" class="cin"> <code>Multi-Material Print Bed</code> should be used.</p>
-<h2 id="reorder-for-continuous-printing">Reorder for continuous printing</h2>
+<h2 id="reorder-for-continuous-printing">Reorder for continuous printing<a class="headerlink" href="#reorder-for-continuous-printing" title="Permanent link">&para;</a></h2>
 <p>Cross-layer continuous printing of branching, porous geometry requires a slender, long nozzle, which is incompatible with multi-material filament extrusion as the mixing chamber must stay close to the outlet to prevent clogging. Sequential planning thus aims to minimize multi-material seam defects and the number of accompanying wipings. <img src="../../components/ReorderMultiMaterialToolpath.png" class="cin"> <code>Reorder Multi-Material Toolpath</code> uses a greedy algorithm that replaces the seam points to reduce seam defects, reorders the multi-material curves of each layer, and generates necessary wipe units.</p>
 <figure>
 <p><img alt="" class="w90" src="mm-wiping-unit.jpg" /></p>
 <figcaption>
-<p>Print scheme of two cells of Schwartz P TPMS on a
+<p class="annotate">Print scheme of two cells of Schwartz P TPMS on a
     <span class="arithmatex">\(300 \times 300\text{ mm}\)</span> print bed, showing the wipe units. This 90-layer print uses 8 wipe units, saving 91% of the wiping material,
-    11% of the total material</p>
+    11% of the total material (1)</p>
+<ol>
+<li>Image adapted from: Y. Zhi, T. Teng, and M. Akbarzadeh, “<a href="https://github.com/yefan-zhi/yefan-zhi-publications/blob/main/029%20As-Continuous-As-Possible%20Multi-Material%20Extrusion%20with%20Gradient%20Composition%20and%20Transition%20(Author's%20Version).pdf">As-Continuous-As-Possible Multi-Material Extrusion with Gradient Composition and Transition</a>,” in <em>Proceedings of ACADIA</em>, Detroit, MI, Oct. 2026. <a href="https://github.com/yefan-zhi/yefan-zhi-publications/blob/main/029%20As-Continuous-As-Possible%20Multi-Material%20Extrusion%20with%20Gradient%20Composition%20and%20Transition%20(Author's%20Version).pdf" title="Download PDF"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M208 48H96c-8.8 0-16 7.2-16 16v384c0 8.8 7.2 16 16 16h80v48H96c-35.3 0-64-28.7-64-64V64C32 28.7 60.7 0 96 0h133.5c17 0 33.3 6.7 45.3 18.7l122.5 122.6c12 12 18.7 28.3 18.7 45.3v149.5h-48v-128h-88c-39.8 0-72-32.2-72-72v-88zm140.1 112L256 67.9V136c0 13.3 10.7 24 24 24zM240 380h32c33.1 0 60 26.9 60 60s-26.9 60-60 60h-12v28c0 11-9 20-20 20s-20-9-20-20V400c0-11 9-20 20-20m32 80c11 0 20-9 20-20s-9-20-20-20h-12v40zm96-80h32c28.7 0 52 23.3 52 52v64c0 28.7-23.3 52-52 52h-32c-11 0-20-9-20-20V400c0-11 9-20 20-20m32 128c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12h-12v88zm76-108c0-11 9-20 20-20h48c11 0 20 9 20 20s-9 20-20 20h-28v24h28c11 0 20 9 20 20s-9 20-20 20h-28v44c0 11-9 20-20 20s-20-9-20-20z"/></svg></span></a> <a class="bibtex-copy" role="button" tabindex="0" title="Copy BibTeX" data-bibtex="@InProceedings{Zhi-2026-Multi-Material-3DP,&#10;    author    = {Yefan Zhi and Teng Teng and Masoud Akbarzadeh},&#10;    booktitle = {Proceedings of the 46th Annual Conference of the Association for Computer-Aided Design in Architecture (ACADIA)},&#10;    title     = {As-Continuous-As-Possible Multi-Material Extrusion with Gradient Composition and Transition},&#10;    year      = {2026},&#10;    address   = {Detroit, MI, USA},&#10;    editor    = {Teng Teng and Sara Codarin and Gretchen Wilkins},&#10;    month     = {October 22-24},&#10;    publisher = {Association for Computer-Aided Design in Architecture (ACADIA)}&#10;}"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M620.8 95.4c-30.8.4-42.1 16.6-47.7 24.5l-.1.1-55.7 80.5 82.8 121.1c7.5 10.6 11.3 12.5 35.4 12.5v9.1c-9.1-.7-28-.7-37.7-.7-12.4 0-30.8 0-42.9.7v-9.1c13.2-.8 16.6-7.3 16.6-10.2 0-1.1 0-2.3-3-6.4L503 221.2l-60.2 87.9c-1.9 2.7-3.8 5.4-3.8 10.2 0 6.1 3.4 13.6 15 14.7v9.1c-9.4-.7-27.1-.7-37.2-.7H414L402.3 425H206.4v-9.1c26.7 0 30.9 0 30.9-16.9V195.8c0-16.9-4.3-16.9-30.9-16.9v-10.3h19.8c-4.8-61.1-10.8-71.7-68-71.8h-20.7c-6.8 1.5-6.8 6.1-6.8 14.4v205c0 13.6 1.1 17.8 32.4 17.8h10.5v9.1h-.4c-17.9-.3-36.7-.7-54.9-.7s-36.9.3-54.8.7h-.6V334h10.7c31.7 0 32.8-4.1 32.8-17.8v-205c0-8.7 0-13.2-7.2-14.3H78.4c-58.4 0-63.7 10.9-68.6 73.3H3l6.3-83.3h217.5l6.1 81.8H397l9 83.3h-6.8c-5.3-49.8-12.1-73-70.3-73h-51.5c-15 0-15.8 1.9-15.8 14.6v93.3h35.5c35.5 0 38.9-12.8 38.9-44h6v97.9h-6c0-31.8-3.4-44.8-38.9-44.8h-35.5v105.2c0 13 .7 14.8 15.8 14.8h52.2c61.1 0 69.9-25.8 77.4-73.6-7.7 0-16.3.2-22.2.7V334c7.2 0 31.7-.4 47.8-23.8l65.5-95.7-72.7-106.7c-8.3-11.7-15.1-12.5-35.8-12.5v-9.1c9.1.7 27.9.7 37.7.7 12.4 0 30.8 0 42.9-.7v9.1c-12.5.4-16.6 6.8-16.6 10.2 0 1.1.4 2.3 3 6.4l55.7 81.6 49.7-72.1c2.7-3.7 4.5-6.8 4.5-11.3 0-6.1-3-13.6-15-14.8v-9.1c9.4.7 24.8.7 37.2.7 9 0 23.3 0 32-.7v9.1z"/></svg></span></a></li>
+</ol>
 </figcaption>
 </figure>
 <!-- Now the nozzle will enter and exit with the same material, called the \emph{transit material}. -->
@@ -1387,7 +1341,7 @@ When the nozzle travels between two curves of different transit materials, a wip
 <p><code>9. Multi-Material Printing → (6) Reorder</code> <br>
 <code>9. Multi-Material Printing → (7) Comprehensive Example</code></p>
 </div>
-<h2 id="bed-adhesion">Bed Adhesion</h2>
+<h2 id="bed-adhesion">Bed Adhesion<a class="headerlink" href="#bed-adhesion" title="Permanent link">&para;</a></h2>
 <p>We can add <img src="../../components/MultiMaterialBedAdhesion.png" class="cin"> <code>Multi-Material Bed Adhesion</code> (skirt or brim) to a <img src="../../components/MultiMaterialToolpath.png" class="cin"> <code>Multi-Material Toolpath</code> to prime the nozzle and enhance stability and adhesion. It should be added before <img src="../../components/ReorderMultiMaterialToolpath.png" class="cin"> <code>Reorder Multi-Material Toolpath</code>.</p>
 
 
@@ -1396,6 +1350,41 @@ When the nozzle travels between two curves of different transit materials, a wip
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2026 21:59:48 UTC">November 11, 2026</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      Yefan Zhi
+    </nav>
+  </span>
+
+    
+    
+  </aside>
 
 
 
@@ -1477,6 +1466,26 @@ When the nozzle travels between two curves of different transit materials, a wip
   
 </div>
       
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/KehxvuacDk" target="_blank" rel="noopener" title="Discord" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:yefanzhi@gmail.com" target="_blank" rel="noopener" title="Email" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1489,12 +1498,14 @@ When the nozzle travels between two curves of different transit materials, a wip
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "toc.follow", "toc.integrate", "content.code.copy", "navigation.footer", "content.tabs.link", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "toc.follow", "toc.integrate", "content.code.copy", "content.tooltips", "navigation.footer", "content.tabs.link", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
         <script src="../../javascripts/katex.js"></script>
+      
+        <script src="../../javascripts/bibtex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
